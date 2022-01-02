@@ -9,7 +9,7 @@ The method of steepest descent based on the direction of gradients at a particul
 ## Conjugate Gradient Method
 This algorithm tries to identify the directions which are conjugate/perpendicular to all the previously calculated directions in order to move forward towards the convergence without requiring the knowledge of hessian values.
 
-<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Conjugate-Gradient.png" width=20% height=20%>
+<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Conjugate-Gradient.png" width=40% height=40%>
 
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Conjugate-Gradient_1.png" width=20% height=20%>
 
@@ -23,17 +23,17 @@ Instead of step size, Newton's method relies on the Hessian value (double deriva
 ### Quasi Newton Method
 Since, the computation of inverse of Hessian matrix is expensive, this algorithm came up with the approximation for the inverse of Hessian matrix using objective function and gradient information without calculating the actual inverse using the rank one correlation algorithm
 
-<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Quasi-Newton.png" width=20% height=20%>
+<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Quasi-Newton.png" width=50% height=50%>
 
 ### DFP
 Davidon, Fletcher, Powell algorithm deals with the problem associated with Quasi Newton method where Hessian matrix for next iteration may not be positive definite, hence the DFp alogrithm inherits the property of previous iteration's positive definite Hessian matrix to the next iteration's Hessian matrix. But there is also another problem with DFP which is for no-quadratic problems there is a chance for this algorithm getting stuck or in other words finding minima at saddle point since these depends on the curvature of the function.
 
-<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/DFP.png" width=20% height=20%>
+<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/DFP.png" width=50% height=50%>
 
 ### BFGS Method
 Here, BFGS tries to approximate the Hessian matrix instead of inverse of the Hessian matrix using the idea of duality.
 
-<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/BFGS.png" width=20% height=20%>
+<img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/BFGS.png" width=50% height=50%>
 
 
 # Derivative Free Optimization
