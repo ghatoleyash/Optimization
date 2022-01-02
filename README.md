@@ -1,25 +1,33 @@
 # Derivative Based Optimization
 ## Steepest Gradient Descent
 The method of steepest descent based on the direction of gradients at a particular point and is calculated using the derivative of the function with respect to the given dimensions. It is different from the gradient descent where step size or learning rate at each and every step is static, however in the case of steepest descent an optimal step size is selected based on the position where minimal level set value of the function is obtained. Here, the step size can identified using the 1D search methods such as golden section or fibonacci search method.
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Steepest-Descent.png" width=20% height=20%>
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Steepest-Descent_1.png" width=20% height=20%>
 
 ## Conjugate Gradient Method
 This algorithm tries to identify the directions which are conjugate/perpendicular to all the previously calculated directions in order to move forward towards the convergence without requiring the knowledge of hessian values.
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Conjugate-Gradient.png" width=20% height=20%>
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Conjugate-Gradient_1.png" width=20% height=20%>
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Conjugate-Gradient_2.png" width=20% height=20%>
 
 ## Newton's Method
 Instead of step size, Newton's method relies on the Hessian value (double derivative) of the function and attempts to reach the local minima within single step but there is a necessary condition that Hessian matrix should be positive definite if the minimization is required else, the algorithm can shoot in different directions without reaching the minimum value. Moreover, it is not guaranteed that Newton's method will always converge and it may stuck in between where the hessian  matrix does not satisfy sylvester's test for positive definite. 
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Newton's-Method.png" width=20% height=20%>
 
 ### Quasi Newton Method
 Since, the computation of inverse of Hessian matrix is expensive, this algorithm came up with the approximation for the inverse of Hessian matrix using objective function and gradient information without calculating the actual inverse using the rank one correlation algorithm
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/Quasi-Newton.png" width=20% height=20%>
 
 ### DFP
-Davidon, Fletcher, Powell algorithm deals with the problem associated with Quasi Newton method where Hessian matrix for next iteration may not be positive definite, hence the DFp alogrithm inherits the property of previous iteration's positive definite Hessian matrix to the next iteration's Hessian matrix. But there is also another problem with DFP which is for no-quadratic problems there is a chance for this algorithm getting stuck or in other words finding minima at saddle point since these depends on the curvature of the function
+Davidon, Fletcher, Powell algorithm deals with the problem associated with Quasi Newton method where Hessian matrix for next iteration may not be positive definite, hence the DFp alogrithm inherits the property of previous iteration's positive definite Hessian matrix to the next iteration's Hessian matrix. But there is also another problem with DFP which is for no-quadratic problems there is a chance for this algorithm getting stuck or in other words finding minima at saddle point since these depends on the curvature of the function.
+
 <img src="https://github.com/ghatoleyash/Optimization/blob/main/Derivative%20Based/Images/DFP.png" width=20% height=20%>
 
 ### BFGS Method
